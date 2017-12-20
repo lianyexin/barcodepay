@@ -18,6 +18,13 @@
 	  <version>1.5.9.RELEASE</version>
   </parent>
   
+  <repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+  </repositories>
+	  
   <dependencies>
  	<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 	<dependency>
@@ -26,6 +33,17 @@
 	    <version>1.5.9.RELEASE</version>
 	</dependency>
 	
+	<dependency>
+        <groupId>org.apache.httpcomponents</groupId>
+        <artifactId>httpclient</artifactId>
+        <version>4.5.3</version>
+    </dependency>
+	
+	<dependency>
+	    <groupId>com.github.wxpay</groupId>
+	    <artifactId>WXPay-SDK-Java</artifactId>
+	    <version>0.0.4</version>
+	</dependency>
   
   </dependencies>
   <build>

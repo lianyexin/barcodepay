@@ -1,7 +1,5 @@
 package barcodepay.apliypay;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.util.Properties;
 
 import com.alipay.api.AlipayClient;

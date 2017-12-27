@@ -19,7 +19,8 @@ public class AlipyPayClient {
 		}
 		
 		Properties prop = new Properties();
-		prop.load(new FileInputStream(new File("alipay.properties")));
+		//prop.load(new FileInputStream(new File("alipay.properties")));
+		prop.load(AlipyPayClient.class.getResourceAsStream("/alipay.properties"));
 
 	    String charset = "UTF-8";
 	    String privateKey = prop.getProperty("privateKey");
@@ -28,11 +29,16 @@ public class AlipyPayClient {
 	    String appId = prop.getProperty("appId");
 	    String format = "json";
 	    String signType = "RSA2";
-	    String notify_domain = prop.getProperty("notify_domain");
+	    String notifyDomain = prop.getProperty("notify_domain");
 
 	    alipayClient = new DefaultAlipayClient(serverUrl, appId, privateKey, format, charset, alipayPulicKey, signType);
 	    
 		return alipayClient;
+	}
+	
+	public static void main(String []strs) throws Exception{
+		
+		AlipyPayClient.getAlipayClient();
 	}
 
 }

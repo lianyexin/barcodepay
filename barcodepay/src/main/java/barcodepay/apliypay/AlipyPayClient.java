@@ -34,9 +34,5 @@ public class AlipyPayClient {
 		return alipayClient;
 	}
 	
-	public static void main(String []strs) throws Exception{
-		
-		AlipyPayClient.getAlipayClient();
-	}
 
 }
